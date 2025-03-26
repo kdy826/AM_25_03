@@ -1,4 +1,4 @@
-package org.example;
+package org.example.util;
 
 import java.time.LocalDateTime;  // LocalDateTime 클래스에게서 임포트 받음
 import java.time.format.DateTimeFormatter;
