@@ -2,7 +2,7 @@ package org.example.controller;
 
 import org.example.dto.Member;
 import org.example.util.Util;
-
+import org.example.ArticleManager.Container;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -17,7 +17,7 @@ public class MemberController extends Controller {
 
     public MemberController(Scanner sc) {
         this.sc = sc;
-        members = new ArrayList<>();
+        members = Container.memberDao.members;
     }
 
     public void doAction(String cmd, String actionMethodName) {

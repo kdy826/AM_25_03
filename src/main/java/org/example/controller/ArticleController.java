@@ -2,10 +2,11 @@ package org.example.controller;
 
 import org.example.dto.Article;
 import org.example.util.Util;
-
+import org.example.ArticleManager.Container;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import org.example.dto.Member;
 
 public class ArticleController extends Controller {
 
@@ -15,10 +16,10 @@ public class ArticleController extends Controller {
 
     int lastArticleId = 3;
 
-
+    List<Member>members = Container.memberDao.members;
     public ArticleController(Scanner sc) {
         this.sc = sc;
-        articles = new ArrayList<>();
+        articles = Container.articleDao.articles;
     }
 
     public void doAction(String cmd, String actionMethodName) {
